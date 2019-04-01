@@ -1,0 +1,26 @@
+I. Red-Black Trees
+   A. A kind of Binary Search Tree
+      1. Order allows easy search
+      2. logarithmic when balanced linear when not
+   B. Red-Black trees tries to keep Binary Search Trees balanced
+      1. Have both red and black nodes
+   C. Red Nodes
+      1. Every red node has a black parent
+   D. Black Nodes
+      1. Every path from root to bottom has the same number of black nodes
+      2. "Bottom"=nodes missing one or both children (Every path from root to a null value)
+   E. Colors Enforce Balance (Perfectly Balanced, as all things should be)
+      1. Does not garentee perfect balance but keeps the trees balanced enough
+      2. Balanced in factor of 2
+         a)longest possible path to bottom is at most twice as large as shortest path
+      3. Keeps it balanced enough to keep logarithmic time (2 log n)
+         a)shortest path: Blk-Blk-Blk...
+         b)longest path: Blk-Red-Blk-Red-Blk-Red...
+   F. Searching
+      1. Same as a normal binary search tree
+   G. Insert
+      1. To start, insert like an ordinary BST and color new node red
+      2. If it breaks the red rule, take red nones plus black grandparent, and rearrange
+         a)make red node main node, and both children black (follow law of BST for deciding which red node to make main)
+      3. If red node ends up at top, change it to black
+#Homework 10: show step by step inserting 8 random values into red-black tree
